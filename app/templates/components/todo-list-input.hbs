@@ -4,12 +4,12 @@
 <div class="todo-list-form">
   {{yield}}
   <div class="form-group">
-    {{input type="text" classBinding=" :todo-list-name :form-control" placeholder="Todo List Title"}}
+    {{input type="text" classBinding=" :todo-list-name :form-control" placeholder="Todo List Title" value=newTitle}}
   </div>
   <div class="form-group">
-    {{textarea classBinding=" :todo-list-desc :form-control" rows="3" placeholder="Todo List Description..."}}
+    {{textarea classBinding=" :todo-list-desc :form-control" rows="3" placeholder="Todo List Description..." value=newDescription}}
   </div>
   <div class="form-group">
-    <button class="btn btn-primary">Create that new todo list</button>
+    <button class="btn btn-primary" {{action "saveNewTodoList"}}>Create that new todo list</button>
   </div>
 </div>

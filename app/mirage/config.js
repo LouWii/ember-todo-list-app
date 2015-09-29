@@ -92,6 +92,18 @@ export default function() {
     // console.log(data);
     return data;
   });
+
+  this.post('/todoLists', function(db, request) {
+    var attrs = JSON.parse(request.requestBody);
+    var todoList = db['todo-lists'].insert(attrs);
+    return {
+      'todo-lists': {
+        type: 'todo-list',
+        id: todoList.id,
+        attributs: todoList
+      }
+    };
+  });
 }
 
 /*
