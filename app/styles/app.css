@@ -1,0 +1,72 @@
+
+
+.app-container {
+  width: 500px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 20px;
+  border: 1px solid #8D8D8D;
+  -webkit-box-shadow: 00px 0px 5px 0px #656565;
+     -moz-box-shadow: 00px 0px 5px 0px #656565;
+       -o-box-shadow: 00px 0px 5px 0px #656565;
+          box-shadow: 00px 0px 5px 0px #656565;
+
+}
+
+.app-title {
+  text-align: center;
+  margin-top: 0;
+}
+
+/*****************************************************************************\
+  Main todo list
+\*****************************************************************************/
+.todolist-list {
+  list-style: none;
+  margin: 20px -20px 0 -20px;
+  padding: 0;
+}
+
+.todolist-list li {
+
+}
+
+.todolist-list li + li{
+  /*margin-top: 5px;*/
+}
+
+.todolist-list li a {
+  display: block;
+  height: 50px;
+
+  font-size: 25px;
+  line-height: 47px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.todolist-list li a:hover {
+  background-color: rgba(92, 171, 239, 0.29);
+  text-decoration: none;
+}
+
+/*****************************************************************************\
+  Add a todo list form
+\*****************************************************************************/
+.todo-list-input {
+  margin-top: 25px;
+}
+.todo-list-input.is-toggled .todo-list-form {
+
+}
+.todo-list-form {
+  display: none;
+}
+.todo-list-form input, .todo-list-form textarea {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.todo-list-form .todo-list-name {
+
+}

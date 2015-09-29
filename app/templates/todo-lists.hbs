@@ -1,0 +1,12 @@
+<p>This is todo-lists route (at "/").</p>
+
+<ul class="todolist-list">
+{{#each model as |todoList|}}
+  {{todo-list-item todo-list=todoList}}
+{{else}}
+  <p>The list is empty, try and add a new Todo List !</p>
+{{/each}}
+</ul>
+
+{{todo-list-input }}
+{{outlet}}

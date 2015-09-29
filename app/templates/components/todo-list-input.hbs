@@ -1,0 +1,12 @@
+
+<button id="add-todo-list" class="btn btn-primary" title="Add a new Todo list" {{action "toggleNewTodoListForm"}}><span class="glyphicon glyphicon-plus"></span></button>
+
+<div class="todo-list-form">
+  {{yield}}
+  <div class="form-group">
+    {{input type="text" classBinding=" :todo-list-name :form-control" placeholder="Todo List Title"}}
+  </div>
+  <div class="form-group">
+    {{textarea classBinding=" :todo-list-desc :form-control" rows="3" placeholder="Todo List Description..."}}
+  </div>
+</div>
