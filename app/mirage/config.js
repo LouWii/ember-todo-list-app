@@ -96,13 +96,16 @@ export default function() {
   this.post('/todoLists', function(db, request) {
     var attrs = JSON.parse(request.requestBody);
     var todoList = db['todo-lists'].insert(attrs);
-    return {
+    todoList.todoList.id = todoList.id;
+    var data = {
       'todo-lists': {
         type: 'todo-list',
         id: todoList.id,
         attributs: todoList
       }
     };
+    // console.log(data);
+    return data;
   });
 }
 
