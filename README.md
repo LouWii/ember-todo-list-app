@@ -1,7 +1,14 @@
 # My-todo-app
 
 This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+
+Learning EmberJS framework by doing this very simple todo-list app. **Main feature :** having multiple todo-lists containing multiple todos.
+
+### Third party projects used
+
+  * [EmberJS](https://github.com/emberjs/ember.js/) (of course...)
+  * [Bootstrap.css](https://github.com/twbs/bootstrap) (because I don't want to spend too much time on design)
+  * [Animate.css](https://github.com/daneden/animate.css/) (because it's awesome !)
 
 ## Prerequisites
 
@@ -50,4 +57,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
