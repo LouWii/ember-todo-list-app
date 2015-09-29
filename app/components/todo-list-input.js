@@ -7,6 +7,7 @@ export default Ember.Component.extend({
   actions: {
     toggleNewTodoListForm() {
       this.toggleProperty('isToggled');
+      this.$().find('.todo-list-form').slideToggle();
     }
   }
 });
