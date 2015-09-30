@@ -7,15 +7,8 @@ export default Ember.Component.extend({
   newTitle: "",
   newDescription: "",
   actions: {
-    toggleNewTodoListForm() {
+    clickNewTodoListForm() {
       this.toggleProperty('isToggled');
-      this.$().find('.todo-list-form').slideToggle();
-      if ( ! this.get('isToggled') ) {
-        // It's been hidden, reset input
-        // TODO: Reset fields once they're effectively hidden
-        this.set('newTitle', '');
-        this.set('newDescription', '');
-      }
     },
     saveNewTodoList() {
       if (this.get('newTitle')){
@@ -25,5 +18,14 @@ export default Ember.Component.extend({
         this.set('isToggled', false);
       }
     }
-  }
+  },
+  toggleNewTodoListForm: function() {
+    // Using an observer here because isToggled can be modified outside of the click action
+    this.$().find('.todo-list-form').slideToggle();
+    if ( ! this.get('isToggled') ) {
+      // It's been hidden, reset input
+      this.set('newTitle', '');
+      this.set('newDescription', '');
+    }
+  }.observes('isToggled')
 });
