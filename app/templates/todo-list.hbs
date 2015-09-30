@@ -3,8 +3,8 @@
   <h3><span class="todo-list-icon glyphicon glyphicon-list"></span> {{model.name}}</h3>
   <p>{{model.description}}</p>
   <ul class="">
-    {{#each model.todoItems as |todoList|}}
-      {{todo-list-item todo-list=todoList}}
+    {{#each model.todoItems as |todoItem|}}
+      {{todo-item-item todo-item=todoItem}}
     {{else}}
       <p>The list is empty, try and add a new Todo !</p>
     {{/each}}

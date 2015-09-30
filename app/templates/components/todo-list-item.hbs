@@ -1,7 +1,7 @@
 
 {{#link-to 'todo-list' todo-list.id}}
 
-<span class="todo-list-icon glyphicon glyphicon-list"></span> {{ todo-list.name }}
+<span class="todo-list-icon glyphicon glyphicon-list"></span> {{ todo-list.name }} ({{ todo-list.nbItems }})
 
 {{yield}}
 {{/link-to}}
