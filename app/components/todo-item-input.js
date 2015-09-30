@@ -7,6 +7,14 @@ export default Ember.Component.extend({
   actions: {
     clickNewTodoItemForm() {
       this.toggleProperty('isToggled');
+    },
+    saveNewTodoItem() {
+      if (this.get('newTitle')){
+        this.sendAction('action', this.get('newTitle'), this.get('newDescription'), this.get('todoListId'));
+        this.set('newTitle', '');
+        this.set('newDescription', '');
+        this.set('isToggled', false);
+      }
     }
   },
   toggleNewTodoListForm: function() {

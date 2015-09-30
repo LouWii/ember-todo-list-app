@@ -107,6 +107,21 @@ export default function() {
     // console.log(data);
     return data;
   });
+
+  this.post('/todoItems', function(db, request) {
+    var attrs = JSON.parse(request.requestBody);
+    var todoItem = db['todo-items'].insert(attrs);
+    todoItem.todoItem.id = todoItem.id;
+    var data = {
+      'todo-items': {
+        type: 'todo-item',
+        id: todoItem.id,
+        attributs: todoItem
+      }
+    };
+    // console.log(data);
+    return data;
+  });
 }
 
 /*

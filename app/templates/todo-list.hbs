@@ -12,7 +12,7 @@
   {{outlet}}
 </div>
 
-{{todo-item-input action="createTodoItem"}}
+{{todo-item-input action="createTodoItem" todoListId=model.id}}
 
 <div class="nav-button">
   <button class="btn btn-default" {{action "goBack"}}><span class="glyphicon glyphicon-arrow-left"></span></button>

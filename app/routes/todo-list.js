@@ -15,6 +15,13 @@ export default Ember.Route.extend({
   actions: {
     goBack() {
       this.transitionTo('todo-lists');
+    },
+    createTodoItem(newTitle, newDescription, todoListId) {
+      this.store.createRecord('todo-item', {
+        name: newTitle,
+        description: newDescription,
+        todoList: this.store.peekRecord('todo-list', todoListId)
+      }).save();
     }
   }
 });
