@@ -1,6 +1,7 @@
 
 
 .app-container {
+  position: relative;
   width: 500px;
   margin: 50px auto;
   padding: 20px;
@@ -15,6 +16,16 @@
 .app-title {
   text-align: center;
   margin-top: 0;
+}
+
+.nav-button {
+  top: 20px;
+  left: 20px;
+  position: absolute;
+}
+
+.todo-list-icon {
+  color: #40A59A;
 }
 
 /*****************************************************************************\
@@ -47,6 +58,10 @@
 .todolist-list li a:hover {
   background-color: rgba(92, 171, 239, 0.29);
   text-decoration: none;
+}
+
+.todolist-list li .todo-list-icon {
+  font-size: 24px;
 }
 
 /*****************************************************************************\
