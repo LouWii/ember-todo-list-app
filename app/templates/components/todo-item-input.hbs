@@ -1,1 +1,14 @@
-{{yield}}
+<button id="add-todo-item" class="btn btn-default" title="{{if isToggled "Cancel" "Add a new Todo item"}}" {{action "clickNewTodoItemForm"}}><span class="glyphicon glyphicon-plus notToggled"></span><span class="glyphicon glyphicon-ban-circle toggled"></span></button>
+
+<div class="todo-item-form">
+  {{yield}}
+  <div class="form-group">
+    {{input type="text" classBinding=" :todo-list-name :form-control" placeholder="Todo Item Title" value=newTitle enter="saveNewTodoItem"}}
+  </div>
+  <div class="form-group">
+    {{textarea classBinding=" :todo-list-desc :form-control" rows="3" placeholder="Todo Item Description..." value=newDescription enter="saveNewTodoItem"}}
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary" {{action "saveNewTodoList"}}>Create that new todo item</button>
+  </div>
+</div>

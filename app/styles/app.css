@@ -67,25 +67,25 @@
 /*****************************************************************************\
   Add a todo list form
 \*****************************************************************************/
-.todo-list-input {
+.todo-list-input, .todo-item-input {
   margin-top: 25px;
 }
-.todo-list-input .toggled {
+.todo-list-input .toggled, .todo-item-input .toggled {
   display: none;
 }
-.todo-list-input .notToggled {
+.todo-list-input .notToggled, .todo-item-input .notToggled {
   display: initial;
 }
-.todo-list-input.is-toggled .toggled {
+.todo-list-input.is-toggled .toggled, .todo-item-input.is-toggled .toggled {
   display: initial;
 }
-.todo-list-input.is-toggled .notToggled {
+.todo-list-input.is-toggled .notToggled, .todo-item-input.is-toggled .notToggled {
   display: none;
 }
 .todo-list-input.is-toggled .todo-list-form {
 
 }
-.todo-list-form {
+.todo-list-form, .todo-item-form {
   display: none;
   margin-top: 20px;
 }
@@ -96,6 +96,6 @@
 .todo-list-form .todo-list-name {
 
 }
-.todo-list-form .form-group:last-child {
+.todo-list-form .form-group:last-child, .todo-item-form .form-group:last-child {
   margin-bottom: 0;
 }
