@@ -2,11 +2,11 @@
 <div class="todo-list-single">
   <h3><span class="todo-list-icon glyphicon glyphicon-list"></span> {{model.name}}</h3>
   <p>{{model.description}}</p>
-  <ul class="">
+  <ul class="todoitems-list">
     {{#each model.todoItems as |todoItem|}}
       {{todo-item-item todo-item=todoItem}}
     {{else}}
-      <p>The list is empty, try and add a new Todo !</p>
+      <li class="empty-list">The list is empty, try and add a new Todo !</li>
     {{/each}}
   </ul>
   {{outlet}}

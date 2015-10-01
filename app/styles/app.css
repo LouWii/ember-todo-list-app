@@ -65,7 +65,43 @@
 }
 
 /*****************************************************************************\
-  Add a todo list form
+  Todo Items list
+\*****************************************************************************/
+.todoitems-list {
+  list-style: none;
+  margin: 20px -20px 0 -20px;
+  padding: 0;
+}
+
+.todoitems-list .todo-item-item {
+  font-size: 20px;
+  padding: 10px 45px;
+  height: 50px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.todoitems-list .todo-item-item:hover {
+  background-color: rgba(0, 166, 228, 0.2);
+}
+
+.todoitems-list .todo-item-item input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+}
+.todoitems-list .todo-item-item .todo-item-link {
+  cursor: pointer;
+}
+
+.todoitems-list .empty-list {
+  padding: 0 45px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/*****************************************************************************\
+  Add a todo list form, add a todo item form
 \*****************************************************************************/
 .todo-list-input, .todo-item-input {
   margin-top: 25px;

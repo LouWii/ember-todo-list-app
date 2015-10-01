@@ -9,7 +9,7 @@ export default Ember.Route.extend({
       // If todo-list not found, try to get it with a query
       todoList = this.store.findRecord('todo-list', params.todo_list_id);
     }
-    console.log(todoList);
+    // console.log(todoList);
     return todoList;
   },
   actions: {
